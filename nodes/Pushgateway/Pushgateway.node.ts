@@ -5,7 +5,7 @@
 	LoggerProxy,
 	NodeConnectionTypes,
 } from 'n8n-workflow';
-import { Label, Metric, MetricParameter } from './types';
+import type { Label, MetricParameter } from './types';
 import { createPrometheusText } from './utils';
 
 const labelCollection = {
@@ -201,8 +201,6 @@ export class Pushgateway implements INodeType {
 						],
 					},
 				],
-
-				// TODO: ADD SUPPORT FOR TOP-LEVEL LABELS
 			},
 		],
 		usableAsTool: true,

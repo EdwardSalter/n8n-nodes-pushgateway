@@ -1,5 +1,4 @@
 ﻿import { Label, Metric } from './types';
-import { LoggerProxy } from 'n8n-workflow';
 
 export function createPrometheusText(metrics: Metric[], globalLabels: Label[] = []) {
 	let body = '';
@@ -10,7 +9,6 @@ export function createPrometheusText(metrics: Metric[], globalLabels: Label[] = 
 			}
 
 			body += `# TYPE ${m.name} ${m.type}\n`;
-
 
 			let labelsString = '';
 			const localLabels = m.labels?.label ?? [];
@@ -28,6 +26,5 @@ export function createPrometheusText(metrics: Metric[], globalLabels: Label[] = 
 			body += `${m.name}${labelsString} ${m.value}\n`;
 		}
 	}
-	LoggerProxy.info('Request Body: ' + body + '!!!!!!!');
 	return body;
 }
