@@ -1,19 +1,19 @@
 {
-	"name": "n8n-nodes-<...>",
+	"name": "n8n-nodes-pushgateway",
 	"version": "0.1.0",
-	"description": "",
+	"description": "A custom node for n8n allowing integration into Prometheus Pushgateway",
 	"license": "MIT",
 	"homepage": "",
 	"keywords": [
 		"n8n-community-node-package"
 	],
 	"author": {
-		"name": "",
-		"email": ""
+		"name": "Edward Salter",
+		"email": "edward.salter@live.co.uk"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/<...>/n8n-nodes-<...>.git"
+		"url": "https://github.com/EdwardSalter/n8n-nodes-pushgateway.git"
 	},
 	"scripts": {
 		"build": "n8n-node build",
@@ -22,7 +22,8 @@
 		"lint": "n8n-node lint",
 		"lint:fix": "n8n-node lint --fix",
 		"release": "n8n-node release",
-		"prepublishOnly": "n8n-node prerelease"
+		"prepublishOnly": "n8n-node prerelease",
+		"start": "n8n start"
 	},
 	"files": [
 		"dist"
@@ -31,12 +32,10 @@
 		"n8nNodesApiVersion": 1,
 		"strict": true,
 		"credentials": [
-			"dist/credentials/GithubIssuesApi.credentials.js",
-			"dist/credentials/GithubIssuesOAuth2Api.credentials.js"
+			"dist/credentials/PushgatewayApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/GithubIssues/GithubIssues.node.js",
-			"dist/nodes/Example/Example.node.js"
+			"dist/nodes/Pushgateway/Pushgateway.node.js"
 		]
 	},
 	"devDependencies": {
@@ -44,7 +43,8 @@
 		"eslint": "9.32.0",
 		"prettier": "3.6.2",
 		"release-it": "^19.0.4",
-		"typescript": "5.9.2"
+		"typescript": "5.9.2",
+		"vitest": "^4.0.16"
 	},
 	"peerDependencies": {
 		"n8n-workflow": "*"

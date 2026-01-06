@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-pushgateway",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Development", "Developer Tools"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://prometheus.io/docs/guides/basic-auth/"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://github.com/prometheus/pushgateway"
+			}
+		]
+	}
+}
