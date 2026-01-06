@@ -3,6 +3,11 @@ import { expect, test } from 'vitest';
 import { createPrometheusText } from '../nodes/Pushgateway/utils';
 import { Label, Metric } from '../nodes/Pushgateway/types';
 
+test("empty metrics array returns empty string", () => {
+	const output = createPrometheusText([]);
+	expect(output).toBe('');
+});
+
 test('metrics without help or labels are formatted correctly', () => {
 	const metrics: Metric[] = [
 		{
