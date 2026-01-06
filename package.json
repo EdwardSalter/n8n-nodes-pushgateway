@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"homepage": "",
 	"keywords": [
-		"n8n-community-node-package"
+		"n8n-community-node-package", "pushgateway", "prometheus", "n8n"
 	],
 	"author": {
 		"name": "Edward Salter",
