@@ -1,11 +1,14 @@
 {
 	"name": "n8n-nodes-pushgateway",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "A custom node for n8n allowing integration into Prometheus Pushgateway",
 	"license": "MIT",
 	"homepage": "",
 	"keywords": [
-		"n8n-community-node-package", "pushgateway", "prometheus", "n8n"
+		"n8n-community-node-package",
+		"pushgateway",
+		"prometheus",
+		"n8n"
 	],
 	"author": {
 		"name": "Edward Salter",
